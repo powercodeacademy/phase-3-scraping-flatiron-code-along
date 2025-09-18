@@ -101,12 +101,12 @@ Start by running the `Scraper` specs with the `rspec spec/scraper_spec.rb` line
 in your terminal. You should see failing tests that describe several methods.
 Let's run through the desired behavior of each method:
 
-##### `#get_page`
+### `#get_page`
 
 The `#get_page` instance method will be responsible for using Nokogiri and
 `open-uri` to grab the entire HTML document from the web page.
 
-##### `#get_courses`
+### `#get_courses`
 
 The `#get_courses` instance method will be responsible for using a CSS selector
 to grab all of the HTML elements that contain a course. In other words, the
@@ -115,13 +115,13 @@ each of which describes a course offering. We're going to have to examine the
 page with the element inspector to find the CSS selector that contains the
 courses.
 
-##### `#make_courses`
+### `#make_courses`
 
 The `#make_courses` method will be responsible for actually instantiating
 `Course` objects and giving each course object the correct `title`, `schedule`
 and `description` attribute that we scraped from the page.
 
-##### `#print_courses`
+### `#print_courses`
 
 The `#print_courses` method we made for you! It calls on `.make_courses` and
 then iterates over all of the courses that get created to `puts` out a list of
